@@ -1,22 +1,31 @@
 /* eslint-disable */
-export default {
+export const STORE = {
     debug: true,
     state: {
-        type: 'passenger',
-        brand: null,
+        types: [],
+        manufacturers: [],
+        models:[],
+        modifications: [],
+        sections: [],
+        parts: [],
+
+        type: null,
+        manufacturer: null,
         model: null,
         modification: null,
-        section: null
+        section: null,
+        part: null
     },
+    
     set(field, newValue){
         if (this.debug) 
-            console.log("set "+field+" вызвано с ", newValue);
+            console.log('set '+field+' вызвано с ', newValue);
         
         this.state[field] = newValue;
     },
     clear(field) {
         if (this.debug) 
-            console.log("clear "+field+" вызвано");
+            console.log('clear '+field+' вызвано');
         this.state[field] = null;
     }
 }

@@ -1,9 +1,9 @@
 /* eslint-disable */
-import store from './store'
+import {STORE} from './store'
 
 export default {  
-    store,
+    STORE,
     install (Vue, options) {
-        Vue.prototype.$store = store
+        Vue.prototype.$store = STORE
     }
 }
